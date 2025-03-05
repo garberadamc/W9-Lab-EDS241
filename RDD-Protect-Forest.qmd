@@ -47,8 +47,6 @@ library(patchwork)
 
 sim_data <- read_csv(here("data", "Simulated_Deforestation_Data5.csv")) 
 
-write_csv(sim_data, here("data", "Simulated_Deforestation_Data5.csv"))
-
 ```
 
 ------------------------------------------------------------------------
@@ -147,8 +145,8 @@ global_samp <- sim_data %>%
 ```{r}
 
 global_rdd <- rdrobust(
-  y = global_samp$deforest,
-  x = global_samp$distance,
+  y = global_samp$deforest, #Outcome
+  x = global_samp$distance, #Running variable
   covs = global_samp %>% select(slope_cat, road_cat, water_cat, soil_cat),
   c = 0, # Cutoff at 0 (protected area boundary)
   #p = 1, # Local linear regression
@@ -205,7 +203,7 @@ run_country_rdd <- function(country_name) {
 # Apply the function to all countries
 rdd_6country <- lapply(unique(sim_data$country), run_country_rdd)
 
-# Print summary for Malaysia
+# Print summary for DRC
 summary(rdd_6country[[3]]) 
 ```
 

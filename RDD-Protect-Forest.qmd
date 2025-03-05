@@ -14,6 +14,10 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 
 ------------------------------------------------------------------------
 
+> [Handout Link - Estimating Regression Discountinuity Designs](https://garberadamc.github.io/eds241-policy-eval/RDD-Protect-Forest)
+
+------------------------------------------------------------------------
+
 ### RDD regression equation:
 
 $Y_i = \beta_0 + \beta_1 D_i + \beta_2 X_i + \beta_3 (D_i \cdot X_i) + \epsilon_i$
@@ -113,7 +117,7 @@ summ(rdd_ols, digits = 3,
 
 ### Estimate & Visialize RDD using {`rdrobust`}
 
-📜 [Documentation - rdrobust](https://cran.r-project.org/web/packages/rdrobust/rdrobust.pdf)
+📜 [Article - {`rdrobust`} package](https://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1453&context=r-journal)
 
 ------------------------------------------------------------------------
 
@@ -248,3 +252,16 @@ final_plot <- wrap_plots(plot_list) +
 final_plot + 
   labs(x = "Distance to Protected Area Border (km)")
 ```
+
+------------------------------------------------------------------------
+
+```{r, message=TRUE, echo=FALSE}
+
+library(praise); library(cowsay)
+
+praise("${EXCLAMATION}! 🚀 Great work 241 - You are ${adjective}! 💫")
+
+say("The End", "duck")
+```
+
+------------------------------------------------------------------------

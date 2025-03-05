@@ -14,6 +14,10 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 
 ------------------------------------------------------------------------
 
+> [Handout Link - DiD / Fixed Effects](https://garberadamc.github.io/eds241-policy-eval/DiD-FE-Stokes15)
+
+------------------------------------------------------------------------
+
 ### Study & data source:
 
 ### *Electoral Backlash against Climate Policy: A Natural Experiment on Retrospective Voting and Local Resistance to Public Policy*. 
@@ -106,4 +110,14 @@ Table 1: *Effects of Proposed Wind Turbines on Incumbent Party Vote Share*
 
 ------------------------------------------------------------------------
 
+```{r, message=TRUE, echo=FALSE}
+
+library(praise); library(cowsay)
+
+praise("${EXCLAMATION}! 🚀 Great work 241 - You are ${adjective}! 💫")
+
+say("The End", "duck")
+```
+
+------------------------------------------------------------------------
 
